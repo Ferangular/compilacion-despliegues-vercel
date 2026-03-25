@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "compilacion-despliegues": {
+    "compilacion-despliegues-vercel": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -85,13 +85,13 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "compilacion-despliegues:build:production"
+              "buildTarget": "compilacion-despliegues-vercel:build:production"
             },
             "development": {
-              "buildTarget": "compilacion-despliegues:build:development"
+              "buildTarget": "compilacion-despliegues-vercel:build:development"
             },
             "fpatino": {
-              "buildTarget": "compilacion-despliegues:build:fpatino"
+              "buildTarget": "compilacion-despliegues-vercel:build:fpatino"
             }
           },
           "defaultConfiguration": "development"
