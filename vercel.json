@@ -1,26 +1,16 @@
 {
   "version": 2,
-  "name": "compilacion-despliegues",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/browser"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
+  "name": "compilacion-despliegues-vercel",
   "buildCommand": "npm run build:vercel",
-  "outputDirectory": "dist/browser",
+  "outputDirectory": "dist/compilacion-despliegues-vercel/browser",
   "installCommand": "npm install",
   "framework": null,
-  "functions": {},
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -60,12 +50,6 @@
           "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
