@@ -1,5 +1,5 @@
 {
-  "name": "compilacion-despliegues",
+  "name": "compilacion-despliegues-vercel",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,9 +10,9 @@
     "build:prod": "ng build --configuration production",
     "build:vercel": "ng build --configuration production --base-href / --output-path dist",
     "preview:vercel": "serve dist/browser",
-    "analyze": "ng build --configuration production --stats-json && npx esbuild-visualizer --metadata dist/compilacion-despliegues/stats.json --open",
+    "analyze": "ng build --configuration production --stats-json && npx esbuild-visualizer --metadata dist/compilacion-despliegues-vercel/stats.json --open",
     "watch": "ng build --watch --configuration development",
-    "preview": "serve dist/compilacion-despliegues/browser",
+    "preview": "serve dist/compilacion-despliegues-vercel/browser",
     "test": "ng test",
     "test:ci": "vitest run --coverage",
     "lint": "eslint .",
